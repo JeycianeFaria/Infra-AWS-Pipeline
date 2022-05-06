@@ -1,3 +1,15 @@
+variable "bucket_name" {
+    type = string
+}
+
+variable "rolearn" {
+   type = string
+}
+
+variable "glueconnections" {
+    type = list(string)
+}
+
 variable "scripts_glue"{
     type = list(object({
         script_name = string

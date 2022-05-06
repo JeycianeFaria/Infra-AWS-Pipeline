@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "jaf-pipeline-dado" {
-  bucket = "-jaf-teste-infra"
+  bucket = "${var.bucket_name}"
 }
 
 resource "aws_s3_bucket_acl" "jaf-pipeline-dado-acl" {
