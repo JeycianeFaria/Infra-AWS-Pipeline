@@ -1,11 +1,11 @@
 resource "aws_s3_object" "raw-data-empresa" { 
   bucket = aws_s3_bucket.jaf-pipeline-dado.id
-  key    = "raw-datas/empresas/"
+  key    = "raw-data/empresas/"
 }
 
 resource "aws_s3_object" "raw-data-socios" { 
   bucket = aws_s3_bucket.jaf-pipeline-dado.id
-  key    = "raw-datas/socios/"
+  key    = "raw-data/socios/"
 }
 
 resource "aws_s3_object" "processed-data" {
