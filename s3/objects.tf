@@ -16,7 +16,7 @@ resource "aws_s3_object" "processed-data" {
 resource "aws_s3_object" "scripts" {
   count = length(var.scripts_glue)  
   bucket = aws_s3_bucket.jaf-pipeline-dado.id
-  key    = "jobs/${var.scripts_glue[count.index].script_name}"
+  key    = "scripts/${var.scripts_glue[count.index].script_name}"
   source = "scripts/${var.scripts_glue[count.index].script_name}"
 }
 
