@@ -17,17 +17,17 @@ resource "aws_s3_object" "scripts" {
   count = length(var.scripts_glue)  
   bucket = aws_s3_bucket.jaf-pipeline-dado.id
   key    = "scripts/${var.scripts_glue[count.index].script_name}"
-  source = "scripts/${var.scripts_glue[count.index].script_name}"
+  source = "s3/scripts/${var.scripts_glue[count.index].script_name}"
 }
 
 resource "aws_s3_object" "deeque_jar" {
   bucket = aws_s3_bucket.jaf-pipeline-dado.id
   key = "libs/deequ-1.2.2-spark-2.4.jar"
-  source =  "libs/deequ-1.2.2-spark-2.4.jar"
+  source =  "s3/libs/deequ-1.2.2-spark-2.4.jar"
 }
 
 resource "aws_s3_object" "pydeequ_zip" {
   bucket = aws_s3_bucket.jaf-pipeline-dado.id
   key = "libs/pydeequ.zip"
-  source =  "libs/pydeequ.zip"
+  source =  "s3/libs/pydeequ.zip"
 }
