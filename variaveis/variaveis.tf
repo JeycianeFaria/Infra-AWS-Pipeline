@@ -1,5 +1,5 @@
 variable "scripts_glue"{
-    type = list(scripts({
+    type = list(object({
         script_name = string
     }))
 }
